@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+  margin: 15px;
+}
+
+.puzzleSelect {
+  display: flex;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.puzzleSelect>select {
+  width: 100%;
+  appearance: none;
+  background: #111111;
+  color: #fff;
+  border: 1px solid orange;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+}
+
+.foundKeys {
+  display: flex;
+  flex-direction: column;
+  background: orange;
+  color: black;
+  padding: 25px 0;
+  margin: 0 auto;
+  max-width: 560px;
+  position: relative;
+  z-index: 2;
+}
+
+.foundKeys>small[data-found=true]{
+  display: block;
+  background:#206225;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;;
+}
+
+.visualHunter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid orange;
+  padding: 15px 15px 50px 15px;
+  gap: 20px;
+
+}
+
+.visualButtons {
+  width: 560px;
+  height: 560px;
+  margin: 0 auto;
+  border: 1px dashed orange;
+  overflow: hidden;
+}
+
+.visualButtons>button {
+  float: left;
+  width: 35px;
+  height: 35px;
+  appearance: none;
+  background: none;
+  border: 1px dashed #4d4d4d;
+  color: #505050;
+  transition: 0.1s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #00000065;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.visualButtons>button:active {
+  font-weight: bold;
+}
+
+.visualButtons>button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.visualButtons>button[data-selected=true] {
+  background: orange;
+  color: #000;
+}
+
+.visualButtons>button small {
+  text-decoration: underline;
+}
+
+.visualButtons[data-found=true]>button[data-selected=true] {
+  background: rgb(38, 152, 70);
+  color: #ffffff;
+}
+
+.visualButtons[data-found=true]{
+  box-shadow: 0 0 250px #206225;
+}
+
+.visualButtons[data-found=true]>button {
+  background: rgb(52, 201, 94);
+  border-color: #206225;
+}
+
+.visualButtons>button:disabled,
+.visualButtons>button:disabled:hover {
+  text-indent: -9999px;
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.visualButtons>button[data-puzzle-start=true] {
+  text-indent: 0px !important;
+  background: orange !important;
+}
+
+.visualBottomButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 5px;
+}
+
+.visualBottomButtons button {
+  appearance: none;
+  background: #111111;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  border: 2px solid orange;
+}
+
+.visualBottomButtons button:hover {
+  background: orange;
+  color: #161616;
+}
+
+.visualBottomButtons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.result {
+  background: #111111;
+  padding: 40px 20px;
+}
+
+.result >div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.result > div > span:first-child {
+  font-family: monospace;
+  word-break: break-all;
+  color: #878787;
+}
+
+.result > div > span:last-child {
+  word-break: break-all;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.footer {
+  margin: 30px 0;
+}
+
+.footer a {
+  color: orange;
+}
